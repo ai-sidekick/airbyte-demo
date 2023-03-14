@@ -44,12 +44,14 @@ Rate limit varies across Linnworks API endpoint. See the endpoint documentation 
 
 ## Getting started
 
+
+
 ### Authentication
 
 Linnworks platform has two portals: seller and developer. First, to create API credentials, log in to the [developer portal](https://developer.linnworks.com) and create an application of type `System Integration`. Then click on provided Installation URL and proceed with an installation wizard. The wizard will show a token that you will need for authentication. The installed application will be present on your account on [seller portal](https://login.linnworks.net/).
 
-Authentication credentials can be obtained on developer portal section Applications -> _Your application name_ -> Edit -> General. And the token, if you missed it during the install, can be obtained anytime under the section Applications -> _Your application name_ -> Installs.
-
+Authentication credentials can be obtained on developer portal section Applications -> _Your application name_ -> Edit -> General. And the token, if you missed it during the install, can be obtained anytime under the section Applications -> _Your application name_ -> Installs. Additionally, it seems like you'd need to provide the credentials that allow access to the app, so your client's credentials. I don't see a workaround, but I looked and found this official doc from Facebook:
+<https://developers.facebook.com/docs/app-review/submission-guide/>
 ## Changelog
 
 | Version | Date       | Pull Request                                           | Subject                                                                     |
