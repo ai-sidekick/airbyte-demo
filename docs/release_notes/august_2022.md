@@ -42,6 +42,7 @@ This page includes new features and improvements to the Airbyte Cloud and Airbyt
 - test
 - test
 - test
+- test
 * Fixed an issue where data types did not display correctly in the UI. The correct data types are now displayed in the streams of your connections. [#15558](https://github.com/airbytehq/airbyte/pull/15558)
 
 * Fixed an issue where requests would fail during a release by adding a shutdown hook to the Airbyte server. This ensures the requests will be gracefully terminated before they can fail. [#15934](https://github.com/airbytehq/airbyte/pull/15934)
