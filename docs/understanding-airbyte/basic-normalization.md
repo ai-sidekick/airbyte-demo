@@ -283,11 +283,15 @@ CREATE TABLE "cars_da3_cars" (
 );
 ```
 
+
+
 ### Naming limitations & truncation
 
 Note that different destinations have various naming limitations, most commonly on how long names can be. For instance, the Postgres documentation states:
 
-> The system uses no more than NAMEDATALEN-1 bytes of an identifier; longer names can be written in commands, but they will be truncated. By default, NAMEDATALEN is 64 so the maximum identifier length is 63 bytes
+> The system uses no more than NAMEDATALEN-1 bytes of an identifier; longer names can be written in commands, but they will be truncated. By default, NAMEDATALEN is 64 so the maximum identifier length is 63 bytes. You can also use quoted identifiers which can contain any character, except the character with code zero. To include a double quote, write two double quotes. This allows constructing table or column names that would otherwise not be possible, such as ones containing spaces or ampersands. The length limitation still applies.
+
+You can export and edit the normalization module to have different table names. Unfortunately by default you don’t have option to change the naming system.
 
 Most modern data warehouses have name lengths limits on the longer side, so this should not affect us that often. Basic Normalization will fallback to the following rules:
 
@@ -312,7 +316,6 @@ As mentioned in the overview:
 * Airbyte places the json blob version of your data in a table called `_airbyte_raw_<stream name>`.
 * If basic normalization is turned on, it will place a separate copy of the data in a table called `<stream name>`.
 * In certain pathological cases, basic normalization is required to generate large models with many columns and multiple intermediate transformation steps for a stream. This may break down the "ephemeral" materialization strategy and require the use of additional intermediate views or tables instead. As a result, you may notice additional temporary tables being generated in the destination to handle these checkpoints.
-
 ## UI Configurations
 
 To enable basic normalization \(which is optional\), you can toggle it on or disable it in the "Normalization and Transformation" section when setting up your connection:
