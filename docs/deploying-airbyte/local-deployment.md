@@ -37,6 +37,7 @@ BASIC_AUTH_PASSWORD=your_new_password_here
 
 After installing the WSL 2 backend and Docker you should be able to run containers using Windows PowerShell. Additionally, as we note frequently, you will need `docker-compose` to build Airbyte from source. The suggested guide already installs `docker-compose` on Windows.
 
+
 ### Setup Guide
 
 **1. Check out system requirements from [Docker documentation](https://docs.docker.com/desktop/windows/install/).**
@@ -53,7 +54,21 @@ Make sure to select the options:
 2. _Install required Windows components for WSL 2_
    when prompted. After installation, it will require to reboot your computer.
 
-**3. You're done!**
+**3. Enable WSL2 and Install Ubuntu 20.4 and Windows Terminal.**
+
+**4. Upgrade Python to version 3.9.**
+
+**5. Install Git, Docker Desktop, and Docker Compose.**
+
+**6. Enable Docker to run correctly on WSL by checking the “Use the WSL two-based engine” and “Enable Kubernetes” checkboxes in the Docker settings.**
+
+**7. Navigate to your Airbyte directory in the terminal and run docker-compose up to spin up all Airbyte containers.**
+
+**8. After the Airbyte banner shows up in the log, navigate to localhost:8000 to access the Airbyte UI.**
+
+For more detailed instructions, please refer to the Airbyte Video Tutorial on YouTube: <https://www.youtube.com/watch?v=CtuU9Oi-6O8>
+
+**You're done!**
 
 ```bash
 git clone https://github.com/airbytehq/airbyte.git
@@ -64,7 +79,6 @@ bash run-ab-platform.sh
 - In your browser, just visit [http://localhost:8000](http://localhost:8000)
 - You will be asked for a username and password. By default, that's username `airbyte` and password `password`. Once you deploy airbyte to your servers, be sure to [change these](/operator-guides/security).
 - Start moving some data!
-
 ## Troubleshooting
 
 If you encounter any issues, just connect to our [Slack](https://slack.airbyte.io). Our community will help! We also have a [troubleshooting](../troubleshooting/on-deploying.md) section in our docs for common problems.
