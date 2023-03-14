@@ -1,7 +1,8 @@
+
+
 # Facebook Marketing
 
-This page guides you through the process of setting up the Facebook Marketing source connector.
-
+This page guides you through the process of setting up the Facebook Marketing source connector. You will need to provide the credentials that allow access to the app. For more information, please refer to the official doc from Facebook: <https://developers.facebook.com/docs/app-review/submission-guide/>
 ## Prerequisites
 
 * A [Facebook Ad Account ID](https://www.facebook.com/business/help/1492627900875762)
