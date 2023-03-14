@@ -30,6 +30,7 @@ This page includes new features and improvements to the Airbyte Cloud and Airbyt
     * Added metric client tracking to record schema validation errors. [#13393](https://github.com/airbytehq/airbyte/pull/13393)
 
 ### Bugs
+- test
 <<<<<<< HEAD
 - test
 - test
